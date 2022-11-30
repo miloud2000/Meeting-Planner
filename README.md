@@ -1,9 +1,9 @@
 
-##Objectif :##
+# Objectif :
 
 Développer une API en Java ou Nodejs implémentant les spécifications ci-dessous
 
-##Spécifications:##
+# Spécifications:
 
 Un de nos clients compte mettre en place un utilitaire pour la gestion de ses salles
 qui devient trop complexe durant le COVID.
