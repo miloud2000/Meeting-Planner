@@ -1,6 +1,6 @@
     
    
-  <img src="https://avatars.githubusercontent.com/u/630230?s=280&v=4" width="1000px">
+  <img src="https://avatars.githubusercontent.com/u/630230?s=280&v=4" width=50% height=50%>
   
 # Objectif :
 
