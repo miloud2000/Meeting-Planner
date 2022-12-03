@@ -1,6 +1,5 @@
 package meeting.palnner.entity;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -19,7 +18,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data   // c'est équivalent à ajouter les annotations @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode à la classe
+@Data
 @Entity
 @Builder
 @NoArgsConstructor
@@ -43,7 +42,7 @@ public class Room {
 		          CascadeType.MERGE
 		      })
 	@JoinTable(name = "room_equipments",joinColumns = { @JoinColumn(name = "room_id") },inverseJoinColumns = { @JoinColumn(name = "equipment_id") })
-	private Set<Equipment> equipments = new HashSet<>();
+	private Set<Equipment> equipments ;
 	
 	
 
@@ -53,7 +52,7 @@ public class Room {
 		          CascadeType.MERGE
 		      })
 	@JoinTable(name = "room_requests",joinColumns = { @JoinColumn(name = "room_id") },inverseJoinColumns = { @JoinColumn(name = "request_id") })
-	private Set<Request> requests = new HashSet<>();
+	private Set<Request> requests ;
 	
 	 
    

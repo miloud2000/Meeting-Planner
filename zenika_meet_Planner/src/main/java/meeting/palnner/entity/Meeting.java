@@ -8,7 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data   //  @Getter @Setter @RequiredArgsConstructor @ToString
+@Data
 @Entity
 @Builder
 @AllArgsConstructor
@@ -36,7 +36,7 @@ public class Meeting {
 		          CascadeType.MERGE
 		      })
 	@JoinTable(name = "meeting_equipments",joinColumns = { @JoinColumn(name = "meeting_id") },inverseJoinColumns = { @JoinColumn(name = "equipment_id") })
-	private Set<Equipment> equipments = new HashSet<>();
+	private Set<Equipment> equipments ;
 	
     
     @OneToMany(mappedBy = "meeting", fetch = FetchType.LAZY,

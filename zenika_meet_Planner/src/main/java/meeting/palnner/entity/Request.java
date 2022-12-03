@@ -23,7 +23,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data   // c'est équivalent à ajouter les annotations @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode à la classe
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -57,8 +57,7 @@ public class Request {
 		      },
 		      mappedBy = "requests")
 	@JsonIgnore
-	private Set<Room> rooms = new HashSet<>();
-	
+	private Set<Room> rooms ;
 	
 	
 }

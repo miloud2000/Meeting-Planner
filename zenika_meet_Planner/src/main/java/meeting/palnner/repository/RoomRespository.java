@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 public interface RoomRespository extends JpaRepository<Room, Long> {
 	List<Room> findRoomsByEquipmentsId(Long equipmentId);
 	@Query(
-			value = "select name ,number_places from room",
+			value = "select name ,number_places   from room",
 			nativeQuery = true
 	)
 	List<String> getAllrooms();

@@ -18,7 +18,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data   // equal to  @Getter @Setter @RequiredArgsConstructor @ToString @EqualsAndHashCode à la classe
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -39,7 +39,7 @@ public class Equipment {
 		      },
 		      mappedBy = "equipments")
 	@JsonIgnore
-	private Set<Meeting> meetings = new HashSet<>();
+	private Set<Meeting> meetings;
 	
 	
 	@ManyToMany(fetch = FetchType.LAZY,
@@ -49,5 +49,5 @@ public class Equipment {
 		      },
 		      mappedBy = "equipments")
 	@JsonIgnore
-	private Set<Room> rooms = new HashSet<>();
+	private Set<Room> rooms ;
 }
